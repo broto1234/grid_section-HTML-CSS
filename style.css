@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #19212e;
+  background: #ecf2f8;
+ }
+
+.container {
+  margin: 0 auto;
+  padding: 2.1rem 1.2rem;
+}
+
+.box {
+  border-radius: 7px;
+  box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.2);
+  padding: 2rem 2.2rem;
+  margin: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: #cfcfcf;
+}
+
+header img {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(192, 192, 192, 0.8);
+  border-radius: 50%;
+}
+
+.nameAnd {
+  font-size: 0.7rem;
+  margin-left: 0.8rem;
+}
+
+.nameAnd p {
+  color: rgba(192, 192, 192, 0.8);
+}
+
+section> h3 {
+  color: whitesmoke;
+  margin: 1rem 0;
+}
+
+section> p {
+  font-weight: 500;
+  color: rgba(192, 192, 192, 0.8);
+}
+
+.box1 {
+  background: #7541c8 url(bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 85% 0%;
+}
+.box2 {
+  background: #48556a;
+}
+.box3 {
+  background: #ffffff;
+}
+.box4 {
+  background: #19212e;
+}
+.box5 {
+  background: #ffffff;
+}
+
+.box3 .nameAnd, .box5 .nameAnd {
+  color: #19212e;
+}
+
+.box3> h3, .box5> h3 {
+  color: #48556a;
+}
+
+footer {
+  width: 90%;
+  color: white;
+  background-color: #7541c8;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+footer p {
+  max-width: 230px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1060px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    margin: 0 auto;
+  }
+  .box1 {
+    grid-area: 1/1/2/3;
+  }
+  .box2 {
+    grid-area: 1/3/2/4;
+  }
+  .box3 {
+    grid-area: 2/1/3/2;
+  }
+  .box4 {
+    grid-area: 2/2/3/4;
+  }
+  .box5 {
+    grid-area: 3/1/4/4;
+  }
+}
+
+@media only screen and (min-width: 1061px) {
+  .container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    padding: 3rem;
+    margin: 0 auto;
+  }
+  
+  .box1 {
+    grid-column: span 2;
+  }
+  .box4 {
+    grid-column: 2/4;
+  }
+  .box5 {
+    grid-area:1/4/3/5 ;
+  }
+}
